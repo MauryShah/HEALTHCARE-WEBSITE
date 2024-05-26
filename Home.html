@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Econ Healthcare - Home</title>
+  <style>
+    .voice {
+      text-align: center;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ffe203f1;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .hover:hover {
+      color: #f0f8ff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .appointments {
+      text-align: center;
+      border: 2px red;
+    }
+
+    #imagelo {
+      text-align: left;
+      /* display: flex; */
+      width: 150px;
+      height: 125px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #0a57a3;
+      min-width: 190px;
+      box-shadow: 0px 8px 16px 0px rgba(17, 29, 167, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav li {
+      margin: 0 15px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #f0f8ff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      /* Light blue background */
+      color: #003366;
+      /* Dark text color */
+    }
+
+    header {
+      background-color: #003366;
+      /* Dark blue header */
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 20px;
+      margin: 10px;
+      background-color: #003366;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
+      transition: transform 0.2s;
+      color: #ffffff;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+
+    }
+
+    footer {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+
+    <img id="imagelo" src="econhealthcare.jpeg" alt="Econ Healthcare">
+    <p>Your Advanced Healthcare Solutions Provider</p>
+  </header>
+  <header>
+
+    <!-- <div class="logo">ADH Healthcare</div> -->
+    <ul class="nav">
+      <li><a href="Home.html" target="_blank">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Services</a>
+        <div class="dropdown-content">
+          <!-- <a href="#">Resource Allocation</a> -->
+          <a href="resourceallocation.html" target="_blank">Resource Allocation</a>
+          <a href="Medicine Stock Management.html" target="_blank">Medicine Management</a>
+          <a href="Worspace2.html">Workforce Management</a>
+        </div>
+      </li>
+      <li><a href="Tut.html">Tutorials</a></li>
+      <li><a href="contacts.html">Doctor Contacts</a></li>
+      <li><a href="NOOB.HTML">About Us</a></li>
+    </ul>
+  </header>
+  <div class="container">
+    <div class="hero">
+      <h1>Transforming Healthcare Through Innovation</h1>
+      <p>Your partner for efficient resource allocation, workforce management, medicine stock management.</p>
+    </div>
+    <section class="appointments" id="appointments">
+      <button class="voice"><a href="Voice Assistant.html">
+          <h3>Add Medicine</h3>
+        </a></button>
+      <h2>Book an Appointment</h2>
+      <p>Conveniently schedule appointments online.</p>
+      <button><a href="nice.html">Book Now</a></button>
+    </section>
+    <div class="features">
+      <div class="feature">
+        <section>
+
+          <h2>Resource Allocation</h2>
+          <p>Optimize resource distribution for enhanced patient care.</p>
+      </div>
+      </section>
+      <section>
+        <div class="feature" class="wid">
+          <h2>Workforce Management</h2>
+          <p>Streamline staff scheduling and assignments for improved efficiency.</p>
+        </div>
+      </section>
+      <section>
+        <div class="feature" class="wid">
+          <h2>Medicine Stock Management</h2>
+          <p>Efficiently manage medicine inventory to prevent stockouts and wastage.</p>
+        </div>
+      </section>
+      <section>
+        <div class="feature" href="" class="wid">
+          <h2>EMERGENCY BOOKINGS</h2>
+          <p>Instant support for medical inquiries and appointment scheduling.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? Feel free to contact us.</p>
+    <button class="hover"><a href="contact_persons.html">Contact Now</a></button>
+
+  </section>
+
+    <footer>
+      <p style="display: inline-block;">Location: </p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.758199650974!2d72.52247!3d23.0693248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9d21b9dff2e1%3A0xf0ce7a8da5b8ca96!2sECON%20Healthcare%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1714104900028!5m2!1sen!2sin"
+        width="100" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p>Address:<a href="https://maps.app.goo.gl/RfVWXW9ko382hJCV8" style="color: white;">FF-11, I-The Address, Road,
+          nr.
+          Sola Road, nr. Sarkhej - Gandhinagar Highway, Panchamrut Bunglows II, Sola, Ahmedabad, Gujarat 380063</a></p>
+      <p>Email:InfoEconHealthcare@gmail.com </p>
+      <p>Phone: +91 875-875-787-1</p>
+      <p>&copy; 2024 Econ Healthcare Center. All rights reserved.</p>
+    </footer>
+
+</body>
+
+<!-- <script>
+  window.chatbaseConfig = {
+    chatbotId: "NzyAOomDU4KKosZpz2cMl",
+  }
+</script>
+<script src="https://www.chatbase.co/embed.min.js" id="NzyAOomDU4KKosZpz2cMl" defer>
+</script> -->
+
+</html>

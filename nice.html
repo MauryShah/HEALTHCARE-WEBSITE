@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ADH.ico" type="image/x-icon">
+
+
+
+    <title>Patient Form and Emergency Button</title>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .type1 {
+            width: 20%;
+            display: block;
+            margin: 0px auto;
+        }
+
+        /* Styles from the first code block */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            background-color: #003366;
+            padding: 0;
+        }
+
+        button {
+            margin-top: 50px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #emergencyForm {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Reset default form styles */
+        form {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        /* Basic styling */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(218, 227, 247);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ... (rest of the styles) */
+
+        /* Additional styles for responsiveness */
+        @media (max-width: 600px) {
+            form {
+                padding: 10px;
+            }
+
+            label {
+                width: 100%;
+            }
+        }
+
+        .emg {
+            border: 5px;
+            border-radius: 2px;
+            background-color: red;
+            text-align: center;
+        }
+
+        .severity {
+            padding-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="emergency-container">
+        <button id="emergency-button" onclick="showPosition()">Emergency</button>
+        <div id="emergency-form" class="hidden">
+            <h2>Emergency Details</h2>
+            <form id="emergency-details">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="aadhar">Aadhar Number:</label>
+                <input type="text" id="aadhar" required>
+
+                <p> <label for="severity">Severity:</label>
+                    <select id="severity" required>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </p>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <form action="">
+        <h1 id="1s"> Patient Information Form</h1>
+        <h2>Contact Information</h2>
+        <p class="a"> <label for="Name">Name:</label>
+            <input type="text" name="Name" id="Name" required>
+        </p>
+        <label for="gender"></label>
+        <p>Gender: &nbsp;&nbsp;
+            <label for="Male">Male</label> <input type="radio" name="Gender" id="Male" required>&nbsp;
+            <label for="Female">Female</label> <input type="radio" name="Gender" id="Female" required>
+        </p>
+
+        <p>
+            <label for="Address">Address:</label>
+            <textarea name="Address" id="Address" cols="30" rows="7" required></textarea>
+        </p>
+        <p>
+            <label for="email">Email:</label> <input type="email" name="email" id="email" required>
+        </p>
+        <p>
+            <label for="Pincode">Pincode:</label> <input type="number" name="Pincode" id="Pincode">
+        </p>
+        <p>
+            <label for="Contact">Contact Number:</label> <input type="number" name="Contact" id="Contact" required>
+        </p>
+        <p>
+            <label for="Abha Id">Abha Id/MAA Card:</label> <input type="number" name="Contact" id="Contact" required>
+        </p>
+        <button type="submit">Submit</button>
+        <hr>
+    </form>
+    <footer style="text-align: center;">
+        <p><b>&copy; 2024 Econ Healthcare Resource Allocation. All rights reserved.</b></p>
+    </footer>
+
+    <script>
+        const emergencyButton = document.getElementById('emergency-button');
+        const emergencyForm = document.getElementById('emergency-form');
+        const emergencyDetailsForm = document.getElementById('emergency-details');
+
+        // function handleEmergency() {
+        //     if (navigator.geolocation) {
+        //         navigator.geolocation.getCurrentPosition(showPosition);
+        //     } else {
+        //         alert('Geolocation is not supported by this browser.');
+        //     }
+        // }
+
+        function showPosition(position) {
+            emergencyForm.classList.remove('hidden');
+        }
+
+        emergencyDetailsForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const aadhar = document.getElementById('aadhar').value;
+            const severity = document.getElementById('severity').value;
+
+            // You can use this data to send to a server or perform necessary actions.
+
+            alert('Emergency details submitted successfully!');
+
+            // Reset the form
+            emergencyDetailsForm.reset();
+            emergencyForm.classList.add('hidden');
+        });
+    </script>
+    <script>
+        window.chatbaseConfig = {
+            chatbotId: "NzyAOomDU4KKosZpz2cMl",
+        }
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" id="NzyAOomDU4KKosZpz2cMl" defer>
+    </script>
+</body>
+
+</html>

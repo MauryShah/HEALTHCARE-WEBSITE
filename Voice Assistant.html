@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Order and Bill with Voice Input</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f567
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        #voiceInput {
+            background-color: #28a745;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        #totalBill {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        #totalAmount {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Medicine Order and Bill with Voice Input</h1>
+    <form id="medicineForm">
+        <label for="medicine">Enter Medicine Name:</label>
+        <input type="text" id="medicine" name="medicine" required>
+        <button id="addMedicine">Add Medicine</button>
+        <!-- <button id="voiceInput">Voice Input</button> -->
+
+        <h2>Medicine List</h2>
+        <ul id="medicineList"></ul>
+
+        <div id="totalBill">
+            <h3>Total Bill: <span id="totalAmount">0</span></h3>
+        </div>
+    </form>
+    <footer style="text-align: center;">
+        <p><b>&copy; 2024 Econ Healthcare Resource Allocation. All rights reserved.</b></p>
+    </footer>
+    <script>
+        const medicineForm = document.getElementById("medicineForm");
+        const medicineInput = document.getElementById("medicine");
+        const addMedicineButton = document.getElementById("addMedicine");
+        const voiceInputButton = document.getElementById("voiceInput");
+        const medicineList = document.getElementById("medicineList");
+        const totalAmountSpan = document.getElementById("totalAmount");
+
+        const medicines = [];
+
+        addMedicineButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            const medicineName = medicineInput.value.trim();
+            if (medicineName !== "") {
+                medicines.push(medicineName);
+                updateMedicineList();
+                updateTotalBill();
+                medicineInput.value = "";
+            }
+        });
+
+        // voiceInputButton.addEventListener("click", () => {
+        //     startVoiceInput();
+        // });
+
+        // function startVoiceInput() {
+        //     const recognition = new webkitSpeechRecognition();
+        //     recognition.continuous = false;
+        //     recognition.interimResults = false;
+        //     recognition.lang = "en-US";
+        //     recognition.start();
+
+        //     recognition.onresult = (event) => {
+        //         const speechResult = event.results[0][0].transcript;
+        //         medicineInput.value = speechResult;
+        //     };
+
+        //     recognition.onend = () => {
+        //         recognition.stop();
+        //     };
+        // }
+
+        function updateMedicineList() {
+            medicineList.innerHTML = "";
+            for (let i = 0; i < medicines.length; i++) {
+                const listItem = document.createElement("li");
+                listItem.textContent = medicines[i];
+                medicineList.appendChild(listItem);
+            }
+        }
+
+        function updateTotalBill() {
+            const totalAmount = medicines.length * 10; // Assuming each medicine costs $10
+            totalAmountSpan.textContent = totalAmount;
+        }
+    </script>
+</body>
+
+</html>

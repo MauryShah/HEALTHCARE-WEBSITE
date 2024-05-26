@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Care Workforce Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background-color: rgb(27, 177, 210, 255); */
+            background-image: url("https://thehealthcaredaily.com/wp-content/uploads/2023/02/Healthcare-workforce-and-talent-management.jpg");
+            /* Replaced with provided URL */
+            background-size: cover;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+            background-color: (27, 177, 210, 255)
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: center;    
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Health Care Workforce Management</h1>
+    </header>
+    <main>
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <ul id="scheduleList">
+                <!-- Schedule items will be added here -->
+            </ul>
+        </section>
+        <section id="addForm">
+            <h2>Add Shift</h2>
+            <form id="shiftForm">
+                <label for="employeeName">Employee Name:</label>
+                <input type="text" id="employeeName" required>
+                <label for="shiftDate">Shift Date:</label>
+                <input type="date" id="shiftDate" required>
+                <button type="submit">Add Shift</button>
+            </form>
+        </section>
+    </main>
+    <div id="footer">
+        <footer style="justify-content: center;">
+            <p style="align-items: center;"><b>&copy; 2024 Econ Healthcare Resource Allocation. All rights reserved.</b>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scheduleList = document.getElementById('scheduleList');
+            const shiftForm = document.getElementById('shiftForm');
+
+            shiftForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const employeeName = document.getElementById('employeeName').value;
+                const shiftDate = document.getElementById('shiftDate').value;
+
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <strong>${employeeName}</strong> - ${shiftDate}
+                `;
+
+                scheduleList.appendChild(listItem);
+
+                shiftForm.reset();
+            });
+        });
+
+
+        window.chatbaseConfig = {
+            chatbotId: "NzyAOomDU4KKosZpz2cMl",
+        }
+    </script>
+
+</body>
+
+</html>

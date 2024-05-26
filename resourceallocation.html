@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare Resource Allocation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #007bff;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+
+      label {
+        display: inline-block;
+        width: 150px;
+        font-weight: bold;
+      }
+
+      select,
+      input[type="number"] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      button {
+        padding: 8px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+        color: #ccc;
+      }
+    </style>
+  </head>
+
+  <body>
+   
+    
+    <img
+      src="https://lh3.googleusercontent.com/N8EtHWjQBOQnZf8gOHTSjytcqOlUZwm3KtU7zyRj2MD664mUaI8Wz0suYxpTi1muSpjL6DDc1ysDi5H656EN-xLlecCOXYbFcOYcjN2Y"
+      alt=""
+      class="type1"
+    />
+
+    <header>
+      <h1>Healthcare Resource Allocation</h1>
+    </header>
+    <section>
+      <style>
+        body {
+          margin: 0px;
+          padding: 0px;
+        }
+        .type1 {
+          width: 20%;
+          display: block;
+          margin: 0px auto;
+        }
+     
+      </style>
+      <h2>Allocate Resources</h2>
+      <form id="resource-allocation-form">
+        <ul>
+          <li>
+            <label for="resource-type">Resource Type:</label>
+            <select id="resource-type" required>
+              <option value="Select">Select Type</option>
+              <option value="doctors">Doctors</option>
+              <option value="nurses">Nurses</option>
+              <option value="equipment">Equipment</option>
+            </select>
+          </li>
+          <li>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" required />
+          </li>
+          <li>
+            <a href="thanks.html">  
+                <button onclick="alert(`Your resources have been successfully allocated`)"><a href="Home.html">Allocate</a></button>  
+              </a>
+         
+          </li>
+        </ul>
+      </form>
+    </section>
+    <footer style="text-align: center;">
+      <p><b>&copy; 2024 Econ Healthcare Resource Allocation. All rights reserved.</b></p>
+    </footer>
+  <script>
+      let selec=document.querySelector("#resource-type");
+      selec.addEventListener("change",()=>{
+        if (selec.value=="Select"){
+          alert("Please select at least one Resource type");
+        }
+        else{
+        
+          alert(`Selected Value: ${selec.value}`);
+
+        }
+      });  
+  </script>
+
+  </body>
+
+</html>
